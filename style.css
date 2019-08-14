@@ -7,3 +7,40 @@ h1{
     color: orange;
     text-align: center
 }
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsla( 355, 75%, 56%, 1 );
+}
+
+/* Hamburger Menu */
+.McButton {
+  bar-w: 44px;
+  bar-h: 3px;
+  bar-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -(bar-w /2);
+  margin-top: -(bar-w /2);
+  width: bar-w;
+  height: (bar-w *3) /4;
+  cursor: pointer;
+  b:{
+    position: absolute;
+    left: 0;
+    width: bar-w;
+    height: bar-h;
+    background-color: bar-color;
+    b:nth-child(1) {
+      top: 0;
+    }
+    b:nth-child(2) {
+      top: 50%;
+    }
+    b:nth-child(3) {
+      top: 100%;
+    };
+  }
+}/* McButton */
