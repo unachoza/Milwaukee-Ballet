@@ -76,6 +76,7 @@ ul {
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    width: 80%;
 
 
 }
@@ -85,8 +86,3 @@ ul {
     background-color: #eeeee3
 }
 
-img {
-    float: left;
-    width: 110px;
-    height: auto;
-}
