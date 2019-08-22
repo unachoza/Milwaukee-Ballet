@@ -1,22 +1,34 @@
-var McButton = $("[data=hamburger-menu]");
-var McBar1 = McButton.find("b:nth-child(1)");
-var McBar2 = McButton.find("b:nth-child(2)");
-var McBar3 = McButton.find("b:nth-child(3)");
+console.log('working')
 
-
-
-McButton.click( function() {
-  $(this).toggleClass("active");
+var Menu = {
   
-  if (McButton.hasClass("active")) {
-    McBar1.velocity({ top: "50%" }, {duration: 200, easing: "swing"});
-    McBar3.velocity({ top: "50%" }, {duration: 200, easing: "swing"})
-    			.velocity({rotateZ:"90deg"}, {duration: 800, delay: 200, easing: [500,20] });
-    McButton.velocity({rotateZ:"135deg"}, {duration: 800, delay: 200, easing: [500,20] });
-  } else {
-    McButton.velocity("reverse");
-		McBar3.velocity({rotateZ:"0deg"}, {duration: 800, easing: [500,20] })
-    			.velocity({ top: "100%" }, {duration: 200, easing: "swing"});
-  	McBar1.velocity("reverse", {delay: 800});
+  el: {
+    ham: $('.menu'),
+    menuTop: $('.menu-top'),
+    menuMiddle: $('.menu-middle'),
+    menuBottom: $('.menu-bottom')
+  },
+  
+  init: function() {
+    Menu.bindUIactions();
+  },
+  
+  bindUIactions: function() {
+    Menu.el.ham
+        .on(
+          'click',
+        function(event) {
+        Menu.activateMenu(event);
+        event.preventDefault();
+      }
+    );
+  },
+  
+  activateMenu: function() {
+    Menu.el.menuTop.toggleClass('menu-top-click');
+    Menu.el.menuMiddle.toggleClass('menu-middle-click');
+    Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
   }
-});
+};
+
+Menu.init();
