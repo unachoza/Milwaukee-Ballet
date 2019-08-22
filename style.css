@@ -34,6 +34,7 @@ h1  {
   position: relative;
   width: 40px;
   height: 40px;
+  float: right;
 }
 .menu-global {
   backface-visibility: hidden;
@@ -66,4 +67,13 @@ h1  {
   top: 15px;
   transform: rotate(-410deg);
   transition: 0.55s 0.5s;
+}
+li {
+    display: inline-block;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between
+
 }
