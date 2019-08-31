@@ -32,3 +32,4 @@ var Menu = {
 };
 
 Menu.init();
+
