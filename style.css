@@ -88,6 +88,10 @@ ul {
     width: 100%;
     background-color: #eeeee3
 }
+img {
+   width: 300px;
+  height: auto;
+}
 
 /* sliding images */
 .image-left {
